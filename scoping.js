@@ -24,6 +24,7 @@ console.log(x); //100
 
 // // --------------------------------------------------------------------------------------------
 var x = 100;
+m = 190;
 if (true) {
   var t = 100000000; // var is function scope so it is block scope so we can access outside scope
 }
@@ -31,11 +32,18 @@ function d() {
   t = 20000000000000; // because t is global scope
   x = 1231212; // because var is only function scope so it defined in block so no issues
   console.log(t); //20000000000000
-  console.log(x); //100
+  console.log(x); //1231212
+  var y = 100000000;
+  j = 1902;
+  let j; // reference error
 }
 d();
+y = 120;
+console.log(y); // 120
+console.log(m); // 190
 console.log(t); //20000000000000
-console.log(x); //100
+console.log(x); //1231212
+
 
 // // --------------------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------------------
